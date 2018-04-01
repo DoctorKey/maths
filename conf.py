@@ -54,7 +54,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'firsttest'
+project = 'maths'
 copyright = '2018, Guo-Hua Wang'
 author = 'Guo-Hua Wang'
 
@@ -72,7 +72,7 @@ release = '1'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+#language = none
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
