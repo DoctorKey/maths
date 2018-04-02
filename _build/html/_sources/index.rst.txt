@@ -53,6 +53,7 @@
 .. toctree::
    :maxdepth: 2
 
+   Set/index
    Topology/index
    RealFunctionAnalysis/index
    FunctionalAnalysis/index

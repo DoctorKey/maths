@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 集合的定义及选择公理 &mdash; maths 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="maths 1 documentation" href="../index.html"/>
+        <link rel="up" title="集合论" href="index.html"/>
+        <link rel="next" title="拓扑学" href="../Topology/index.html"/>
+        <link rel="prev" title="集合论" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> maths
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1,0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">集合论</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 集合的定义及选择公理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.1. 集合的定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.2. 选择公理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Topology/index.html">拓扑学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../RealFunctionAnalysis/index.html">实变函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FunctionalAnalysis/index.html">泛函分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Statistics/index.html">统计学</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">maths</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">集合论</a> &raquo;</li>
+        
+      <li>1. 集合的定义及选择公理</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Set/01_define.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="define">
+<span id="id1"></span><h1>1. 集合的定义及选择公理<a class="headerlink" href="#define" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1.1. 集合的定义<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>集合论是由G.Cantor在19世纪80年代创立的。</p>
+<p>集合(set)是指把具有某种特征或满足一定性质的所有对象或事物视为一个整体时，这个整体就称为集合，而这些事物或对象就称为属于该集合的元素。</p>
+<p>以我经验来看，大部分人对集合的概念比较熟悉。中国的高中生就已经开始学习集合，了解确定性，互异性，无序性等集合性质。</p>
+<p>但对于这个定义，大部分人可能理解得不是很透彻。这里我通过选择公理，加深对集合的理解。</p>
+</div>
+<div class="section" id="id3">
+<h2>1.2. 选择公理<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>选择公理是一条集合论的公理。它的内容很简单，大意是：给定一系列非空集合，总可以从每一个集合中选择一个元素，这些元素组成一个新的集合。举个例子，假设有许多双鞋(甚至无数双鞋)，每双鞋看作一个集合，那么我们可以从每双鞋中选择一只鞋，选出来的鞋可以组成一个集合。</p>
+<p>这样一条公理看起来没有任何问题，但实际上选择公理一直存在争议。其中一个争议就是与集合的定义有冲突。</p>
+<p>集合的定义中，集合的元素要求具有某种特征或满足一定性质。而对于选择公理我们得到的“集合”，由于我们并不知道这个“集合”中有哪些元素，所以我们更不知道这些元素具有什么特征或满足什么性质，故我们得到的并不是严格意义上的集合。</p>
+<p>当我第一次听到这番说辞时，我觉得简直就是鸡蛋里挑骨头。后来通过不断地接触数学，我才发觉，数学就是一场逻辑，这逻辑要足够精确，才能一环套一环，得到正确的结论。而如果哪一环出现问题，就可能导致之后的整个推理崩塌。</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Topology/index.html" class="btn btn-neutral float-right" title="拓扑学" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="集合论" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Guo-Hua Wang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
