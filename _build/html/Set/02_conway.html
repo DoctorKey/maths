@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Conway的超现实数理论 &mdash; maths 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="maths 1 documentation" href="../index.html"/>
+        <link rel="up" title="集合论" href="index.html"/>
+        <link rel="next" title="拓扑学" href="../Topology/index.html"/>
+        <link rel="prev" title="1. 集合的定义及选择公理" href="01_define.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> maths
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1,0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">集合论</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_define.html">1. 集合的定义及选择公理</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Conway的超现实数理论</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.1. 介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.2. Conway对数字的定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.3. 数字的产生</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.4. 总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Topology/index.html">拓扑学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../RealFunctionAnalysis/index.html">实变函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FunctionalAnalysis/index.html">泛函分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Statistics/index.html">统计学</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">maths</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">集合论</a> &raquo;</li>
+        
+      <li>2. Conway的超现实数理论</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Set/02_conway.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conway">
+<span id="id1"></span><h1>2. Conway的超现实数理论<a class="headerlink" href="#conway" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>2.1. 介绍<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>计算机专业的同学应该对高德纳比较熟悉，他曾经写过三卷本《计算机程序设计艺术》，获得IEEE先驱奖和ACM图灵奖。高德纳曾在1973年1月，在挪威用了六天写了本小册子，书名为《surreal numbers》</p>
+<p>这本书中文翻译为《研究之美》。当时懵懂我还不知道研究美不美，看到一位大师写了这么一本书，毫不犹豫拿起来翻了翻。结果我发现，这明明是本故事书。再仔细一看，这是本数学书啊。再看看书名，英文名明明就是《超现实数理论》，硬生生被翻译为《研究之美》……</p>
+<p>言归正传，这本书高德纳用讲故事的方式叙述了一遍这个理论。这个理论使用集合定义数，即使用集合定义了0，1，2，…和相关计算。非常优美，通过这篇博客，简要介绍一些思想。</p>
+</div>
+<div class="section" id="id3">
+<h2>2.2. Conway对数字的定义<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Conway定义所有数满足以下两条规则：</p>
+<ul class="simple">
+<li>每个数，均由两个数集组成，数集指数的集合，如{0,1,2,3}。这两个数集分为左集和右集，即可以写为{0,1},{2,3}，其中{0,1}称为左集，{2,3}称为右集。左集中的数，没有一个大于或等于右集中的数。</li>
+<li>定义甲数小于或等于乙数，当且仅当甲数左集中没有数大于或等于乙数，且乙数的右集中没有数小于或等于甲数。</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>2.3. 数字的产生<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Conway首先得到了数字 <span class="math">\(0=(\phi, \phi)\)</span> 。我们验证下条件1，首先0由两个数集产生，这两个数集均为空集，分为左集和右集，由于空集没有元素，自然满足左集中的数，没有一个大于或等于右集中的数。</p>
+<p>根据0，我们继而得到1和-1. <span class="math">\(-1 = (\phi, {0}), 1 = ({0}, \phi)\)</span> . 读者可以自己验证这两个数是否满足条件1.</p>
+<p>这里引出一个问题，为什么不是 <span class="math">\(1 = (\phi, {0}), -1 = ({0}, \phi)\)</span>？由第二条，我们证明 <span class="math">\((\phi, {0}) \leq ({0}, \phi)\)</span> . 首先，对于甲数 <span class="math">\((\phi, {0})\)</span>,左集为空集，自然满足没有数大于或等于乙数。对于乙数 <span class="math">\(({0}, \phi)\)</span>,右集是空集，自然满足没有数小于或等于甲数。</p>
+<p>读者可以自己验证 <span class="math">\((\phi, {0}) \leq (\phi, \phi)\)</span> 和 <span class="math">\((\phi, \phi) \leq({0}, \phi)\)</span>. 这样这三个数的顺序就全出来了，我们可以自然地定义为-1，0，1，并且有 <span class="math">\(-1\leq 0\leq 1\)</span>.</p>
+</div>
+<div class="section" id="id5">
+<h2>2.4. 总结<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>根据上述的规则，可以再定义-2，2，-3，3等等，甚至可以定义出无穷。之后，高德纳证明了一些定理，证明了加法，甚至乘法，感兴趣的朋友可以参考原书。</p>
+<p>高德纳写这样一本小册子，其一是介绍一下这个理论，更有意义的是，带领读者模拟做了次科研。读者随着故事的情节，体会到发展这个理论遇到的种种困难，也体会到解决这些问题的喜悦。所以中译本命名为《研究之美》也是有道理的。</p>
+<p>在传统的教育中，创新是很难教授的一个技能。作者也试图通过这本书，激发读者的创新意识。总体来说，这本书确实是不可多得的一本好书。</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Topology/index.html" class="btn btn-neutral float-right" title="拓扑学" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01_define.html" class="btn btn-neutral" title="1. 集合的定义及选择公理" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Guo-Hua Wang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
