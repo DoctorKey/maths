@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 拓扑空间的定义 &mdash; maths 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="maths 1 documentation" href="../index.html"/>
+        <link rel="up" title="拓扑学" href="index.html"/>
+        <link rel="next" title="实变函数" href="../RealFunctionAnalysis/index.html"/>
+        <link rel="prev" title="拓扑学" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> maths
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1,0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Set/index.html">集合论</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">拓扑学</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 拓扑空间的定义</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.1. 集合的结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.2. 拓扑的定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.3. 开集与闭集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.4. 总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../RealFunctionAnalysis/index.html">实变函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FunctionalAnalysis/index.html">泛函分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Statistics/index.html">统计学</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">maths</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">拓扑学</a> &raquo;</li>
+        
+      <li>1. 拓扑空间的定义</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Topology/01_define.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="define">
+<span id="id1"></span><h1>1. 拓扑空间的定义<a class="headerlink" href="#define" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1.1. 集合的结构<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>当我们有一个集合 <span class="math">\(X\)</span> ，里面有元素 <span class="math">\(x_1, x_2, \dots, x_n\)</span> . 我们可以研究这个集合的什么性质呢？在集合论中提到，我们可以研究这个集合的基数，即元素的个数。然后呢？我们还要研究什么？</p>
+<p>我们往往还想了解元素之间的关系，哪些元素关系近，哪些元素关系远。比如我们把全校所有学生作为一个集合，我们知道其中一些学生是同一专业的，这些学生关系比较近。我们应该如何形式化表达这样的结构。</p>
+<p>一种思路是定义一个距离函数 <span class="math">\(d\)</span> , 距离函数输入是集合中的两个元素，输出可以是一个实数，实数的大小表示两个元素距离的远近。</p>
+<p>对于距离函数，我们马上发现有很多不方便的地方。假如集合中的元素不是数；我们如何定义输出实数的值，等等问题。</p>
+<p>拓扑找到了一种更一般的方法定义集合上的结构。如果 <span class="math">\(x_1, x_2\)</span> 有关系，我们可以再定义一个集合 <span class="math">\(\{x_1, x_2\}\)</span> . 这个集合是全集 <span class="math">\(X\)</span> 的子集。同理， <span class="math">\(X\)</span> 的其他子集表现了其他元素的关系，如 <span class="math">\(\{x_2, x_3, x_4\}\)</span> 表示  <span class="math">\(x_2, x_3, x_4\)</span> 这三个元素是有关系的。这样，我们合理地选择 <span class="math">\(X\)</span> 的一部分子集，就能把 <span class="math">\(X\)</span> 上的结构表达清楚。对于这些子集，我们可以让它们组成一个集合，成为 <strong>子集族</strong> ，记作  <span class="math">\(\tau\)</span> . 如 <span class="math">\(\tau = \{\{x_1, x_2\}, \{x_2, x_3, x_4\}, \dots\}\)</span></p>
+<p>这样我们仅通过集合就定义了 <span class="math">\(X\)</span> 上的结构。在上述的构造过程中，我们发现我们能随便选择子集作为 <span class="math">\(\tau\)</span> 中的元素。但对于拓扑结构，我们要求选择的子集具有一定的性质。即对于拓扑学，我们只研究全集 <span class="math">\(X\)</span> 的一部分结构。下面我们看看拓扑结构是什么样的。</p>
+</div>
+<div class="section" id="id3">
+<h2>1.2. 拓扑的定义<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>设 <span class="math">\(X\)</span> 是一个非空集合，记 <span class="math">\(2^X\)</span> 是 <span class="math">\(X\)</span> 的 <strong>幂集</strong> ，即以 <span class="math">\(X\)</span> 的所有子集（包含空集  <span class="math">\(\phi\)</span> 和 <span class="math">\(X\)</span> 自己）为成员的集合。把 <span class="math">\(2^X\)</span> 的子集（即以X的一部分子集为成员的集合）成为 <span class="math">\(X\)</span> 的子集族。</p>
+<dl class="docutils">
+<dt>定义</dt>
+<dd><p class="first">设 <span class="math">\(X\)</span> 是一非空集合， <span class="math">\(X\)</span> 的一个子集族 <span class="math">\(\tau\)</span> 称为 <span class="math">\(X\)</span> 的一个拓扑，如果它满足：</p>
+<ol class="arabic simple">
+<li><span class="math">\(X, \phi\)</span> 都包含在  <span class="math">\(\tau\)</span> 中；</li>
+<li><span class="math">\(\tau\)</span> 中任意多个成员的并集仍在 <span class="math">\(\tau\)</span> 中；</li>
+</ol>
+<p class="last">3.  <span class="math">\(\tau\)</span> 中有限多个成员的交集仍在 <span class="math">\(\tau\)</span> 中。
+集合 <span class="math">\(X\)</span> 和它的一个拓扑 <span class="math">\(\tau\)</span> 一起称为一个 <strong>拓扑空间</strong> ，记作 <span class="math">\((X, \tau)\)</span> .称 <span class="math">\(\tau\)</span> 中的成员为这个拓扑空间的 <strong>开集</strong> 。</p>
+</dd>
+</dl>
+<p>初学者肯定疑问这三个条件是如何得到的。这里只能说，对于数学的发展，很多概念是反反复复确定下来的。可能存在另外的条件，但是那些条件要么不是很有趣，得不到有用的结论，要么就是人类还没发现。总之，对于这个定义，我们只能先暂时接收，看看这样的条件可以得到哪些结论。</p>
+</div>
+<div class="section" id="id4">
+<h2>1.3. 开集与闭集<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>读者可能已经发现，在这个定义中，我们定义的开集。没错，我们熟悉的开集就是这里定义的。对于一维欧几里得空间，开集就是开区间的并集，当然，一个开区间也是开集。那么自然会问，欧式空间是拓扑空间，答案是肯定。（欧式空间是很复杂的，我们之后再详细介绍）。</p>
+<p>有了开集，那我们如何定义闭集呢。很简单，开集的补集就是闭集。这里求补集是对于全空间X求补集。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">开集和闭集相交并不是空的，有些集合既属于开集也属于闭集，如空集，由条件1，空集是开集。同时由条件1，全集是开集，全集的补集空集为闭集。故空集既是开集也是闭集。同理全集既开也闭。</p>
+</div>
+<p>这里我们简单地用开区间理解一下条件2和条件3. 为什么条件2是任意并，条件3是可数交。
+首先对于开集，我们发现开集的任意并还是开区间的并，仍然是开集。可是，开区间的任意交可能交出闭集。如 <span class="math">\(\bigcup_{n=1}^\infty (-\frac{1}{n}, 1) = [0, 1)\)</span> .当可数交则不会产生这样的问题。其实对于条件3，可数交是开集等价于任意两个开集的交仍是开集。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">对于拓扑空间的性质和结论，我们可以将欧式空间作为一个例子直观地感受一下。但拓扑空间是一种一般化的空间，在学习过程中应该更关注自身的逻辑。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>1.4. 总结<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>拓扑空间 子集族 幂集 开集 闭集</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../RealFunctionAnalysis/index.html" class="btn btn-neutral float-right" title="实变函数" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="拓扑学" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Guo-Hua Wang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

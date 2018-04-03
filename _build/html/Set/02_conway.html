@@ -184,16 +184,16 @@
 <h2>2.2. Conway对数字的定义<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Conway定义所有数满足以下两条规则：</p>
 <ul class="simple">
-<li>每个数，均由两个数集组成，数集指数的集合，如{0,1,2,3}。这两个数集分为左集和右集，即可以写为{0,1},{2,3}，其中{0,1}称为左集，{2,3}称为右集。左集中的数，没有一个大于或等于右集中的数。</li>
+<li>每个数，均由两个数集组成，数集指数的集合，如 <span class="math">\(\{0,1,2,3\}\)</span> 。这两个数集分为左集和右集，即可以写为 <span class="math">\(\{0,1\},\{2,3\}\)</span> ，其中 <span class="math">\(\{0,1\}\)</span> 称为左集， <span class="math">\(\{2,3\}\)</span> 称为右集。左集中的数，没有一个大于或等于右集中的数。</li>
 <li>定义甲数小于或等于乙数，当且仅当甲数左集中没有数大于或等于乙数，且乙数的右集中没有数小于或等于甲数。</li>
 </ul>
 </div>
 <div class="section" id="id4">
 <h2>2.3. 数字的产生<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Conway首先得到了数字 <span class="math">\(0=(\phi, \phi)\)</span> 。我们验证下条件1，首先0由两个数集产生，这两个数集均为空集，分为左集和右集，由于空集没有元素，自然满足左集中的数，没有一个大于或等于右集中的数。</p>
-<p>根据0，我们继而得到1和-1. <span class="math">\(-1 = (\phi, {0}), 1 = ({0}, \phi)\)</span> . 读者可以自己验证这两个数是否满足条件1.</p>
-<p>这里引出一个问题，为什么不是 <span class="math">\(1 = (\phi, {0}), -1 = ({0}, \phi)\)</span>？由第二条，我们证明 <span class="math">\((\phi, {0}) \leq ({0}, \phi)\)</span> . 首先，对于甲数 <span class="math">\((\phi, {0})\)</span>,左集为空集，自然满足没有数大于或等于乙数。对于乙数 <span class="math">\(({0}, \phi)\)</span>,右集是空集，自然满足没有数小于或等于甲数。</p>
-<p>读者可以自己验证 <span class="math">\((\phi, {0}) \leq (\phi, \phi)\)</span> 和 <span class="math">\((\phi, \phi) \leq({0}, \phi)\)</span>. 这样这三个数的顺序就全出来了，我们可以自然地定义为-1，0，1，并且有 <span class="math">\(-1\leq 0\leq 1\)</span>.</p>
+<p>根据0，我们继而得到1和-1. <span class="math">\(-1 = (\phi, \{0\}), 1 = (\{0\}, \phi)\)</span> . 读者可以自己验证这两个数是否满足条件1.</p>
+<p>这里引出一个问题，为什么不是 <span class="math">\(1 = (\phi, \{0\}), -1 = (\{0\}, \phi)\)</span>？由第二条，我们证明 <span class="math">\((\phi, \{0\}) \leq (\{0\}, \phi)\)</span> . 首先，对于甲数 <span class="math">\((\phi, \{0\})\)</span>,左集为空集，自然满足没有数大于或等于乙数。对于乙数 <span class="math">\(({0}, \phi)\)</span>,右集是空集，自然满足没有数小于或等于甲数。</p>
+<p>读者可以自己验证 <span class="math">\((\phi, \{0\}) \leq (\phi, \phi)\)</span> 和 <span class="math">\((\phi, \phi) \leq(\{0\}, \phi)\)</span>. 这样这三个数的顺序就全出来了，我们可以自然地定义为-1，0，1，并且有 <span class="math">\(-1\leq 0\leq 1\)</span>.</p>
 </div>
 <div class="section" id="id5">
 <h2>2.4. 总结<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
